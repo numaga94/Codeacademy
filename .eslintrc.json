@@ -21,7 +21,7 @@
     "no-unexpected-multiline": "error",
     "max-len": ["error", { "code": 150, "ignoreUrls": true }],
     // "indent": ["error", 2],
-    // "semi": ["error", "always"],
+    "semi": ["error", "always"],
     "comma-dangle": ["error", "never"],
     "object-curly-spacing": ["error", "always"],
     "react/jsx-closing-bracket-location": [1, "line-aligned"],
