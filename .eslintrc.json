@@ -26,9 +26,9 @@
     "object-curly-spacing": ["error", "always"],
     "react/jsx-closing-bracket-location": [1, "line-aligned"],
     "arrow-parens": ["off", "as-needed"],
-    "linebreak-style": 0,
+    "linebreak-style": "off",
     "radix": "error",
-    "prefer-const": "off",
-    "no-restricted-syntax": "off"
+    "prefer-const": "off"
+    // "no-restricted-syntax": "off"
   }
 }

@@ -105,7 +105,7 @@ function validateCred(array) {
     }
     sum += value;
   }
-  return sum % 10 === 0;
+  console.log(array.join(''), sum % 10 === 0);
 }
 
 function findInvalidCards(arrays) {
@@ -161,4 +161,5 @@ function idInvalidCardCompanies(arrays) {
 const cards = numbers(realCards);
 // console.log(cards);
 const inVaildCards = findInvalidCards(cards);
-console.log(idInvalidCardCompanies(inVaildCards));
+// console.log(idInvalidCardCompanies(inVaildCards));
+// console.log(inVaildCards);
