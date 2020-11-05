@@ -27,8 +27,8 @@
     "react/jsx-closing-bracket-location": [1, "line-aligned"],
     "arrow-parens": ["off", "as-needed"],
     "linebreak-style": "off",
-    "radix": "error",
-    "prefer-const": "off"
+    "radix": "error"
+    // "prefer-const": "off"
     // "no-restricted-syntax": "off"
   }
 }
