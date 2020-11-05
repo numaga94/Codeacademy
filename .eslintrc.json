@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/babel",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard",
+    "prettier/unicorn",
+    "prettier/vue"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "error",
+    "no-console": "off",
+    "no-plusplus": "off",
+    "curly": ["error", "all"],
+    "no-unexpected-multiline": "error",
+    "max-len": ["error", { "code": 150, "ignoreUrls": true }],
+    // "indent": ["error", 2],
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "never"],
+    "object-curly-spacing": ["error", "always"],
+    "react/jsx-closing-bracket-location": [1, "line-aligned"],
+    "arrow-parens": ["off", "as-needed"],
+    "linebreak-style": "off",
+    "radix": "error",
+    "prefer-const": "off"
+    // "no-restricted-syntax": "off"
+  }
+}
