@@ -16,6 +16,9 @@ showcase basic JavaScript syntax and programming concepts.
   - [Store message components](#store-message-components)
   - [Create the message](#create-the-message)
   - [Put the program together](#put-the-program-together)
+  - [Resources](#resources)
+    - [Debugging Tips](#debugging-tips)
+    - [Example Code](#example-code)
   - [Next Steps](#next-steps)
 - [Screenshots](#screenshots)
 - [Prerequisites](#prerequisites)
@@ -81,7 +84,7 @@ the text you wrote being printed to the terminal window. You can run your script
 
 Set up Git tracking in your directory and add and commit changes as you make them.
 
-**`git init my_message_generator`**
+    git init my_message_generator
 
 If you want a refresher on the syntax, you can review the
 [Git lesson](https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-git-and-github-part-i/modules/fecp-introduction-to-git/lessons/git-workflow/exercises/git-generalizations)
@@ -114,6 +117,31 @@ You can use a function to handle the overall formatting and display of the rando
 You’re welcome to expand your program beyond these project tasks and get creative!
 
 In addition to doing random messages, you could add random [ASCII art](https://en.wikipedia.org/wiki/ASCII_art).
+
+### Resources
+
+#### Debugging Tips
+
+1. Feeling stuck? Try the following:
+
+   - Google your question: oftentimes, someone has had the same question as you! Check out websites like StackOverflow and Dev.to to see how other
+     folks have found solutions.
+   - Read the documentation: make sure to carefully read through the documentation for any languages and libraries that you are using. Oftentimes
+     they’ll have examples of what you’re looking for!
+   - Rubber ducking: try to explain a problem to a friend or co-worker. Oftentimes you’ll figure out the solution as you’re trying to explain it. And
+     if not, getting another pair of eyes on your code can be helpful.
+
+2. Check out these helpful resources:
+
+   - Thinking About Errors in Your Code Differently
+   - Debugging JavaScript Code
+
+#### Example Code
+
+What to see an example of how someone else has completed this project?
+[Click this link to download](https://static-assets.codecademy.com/Paths/full-stack-career-path/portfolio-projects/mixed-messages/script.js.zip) a zip
+file containing one example solution to this project. Remember: your project doesn’t have to look anything like this! It should be unique to your
+vision.
 
 ## Screenshots
 
@@ -164,28 +192,3 @@ Add here credits. Project inspired by..., based on...
 ## Contact
 
 Created by [@shiwei](mailto:shiwei1991@gmail.com) - feel free to contact me!
-
-## Resources
-
-### Debugging Tips
-
-Feeling stuck? Try the following:
-
-- Google your question: oftentimes, someone has had the same question as you! Check out websites like StackOverflow and Dev.to to see how other folks
-  have found solutions.
-- Read the documentation: make sure to carefully read through the documentation for any languages and libraries that you are using. Oftentimes they’ll
-  have examples of what you’re looking for!
-- Rubber ducking: try to explain a problem to a friend or co-worker. Oftentimes you’ll figure out the solution as you’re trying to explain it. And if
-  not, getting another pair of eyes on your code can be helpful.
-
-### Check out these helpful resources:
-
-- Thinking About Errors in Your Code Differently
-- Debugging JavaScript Code
-
-### Example Code
-
-What to see an example of how someone else has completed this project?
-[Click this link to download](https://static-assets.codecademy.com/Paths/full-stack-career-path/portfolio-projects/mixed-messages/script.js.zip) a zip
-file containing one example solution to this project. Remember: your project doesn’t have to look anything like this! It should be unique to your
-vision.
