@@ -56,6 +56,8 @@ Consider also using additional elements such as:
 
 I leave you here an example of [README.md file template you can download](https://github.com/ritaly/README-cheatsheet).
 
+**`git clone https://github.com/ritaly/README-cheatsheet`**
+
 Take a look at its formatting, and copy a [raw version](https://raw.githubusercontent.com/ritaly/README-cheatsheet/master/README.md) to your
 README.md.
 
