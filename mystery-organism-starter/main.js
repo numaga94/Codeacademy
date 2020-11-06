@@ -118,7 +118,7 @@ const pAequorFactory = (specimenNum = Math.floor(Math.random() * 1000), dna = mo
        * Use the .compareDNA() to find the two most related instances of pAequor.
        */
 
-      let complementPair = [];
+      const complementPair = [];
       for (let i = 0; i < 15; i++) {
         switch (this.dna[i]) {
           case 'A':
@@ -162,12 +162,13 @@ const survivals = () => {
   return list;
 };
 
-const instances = survivals();
-for (let instance in instances) {
-  console.log(`one of 30 instances of pAequor that can survive = [${instances[instance]}]`);
-}
+// const instances = survivals();
+// for (const instance in instances) {
+//   console.log(`one of 30 instances of pAequor that can survive = [${instances[instance]}]`);
+// }
 
 const newpAequor = pAequorFactory();
 newpAequor.mutate();
+console.log(newpAequor);
 // newpAequor.complementStrand();
-newpAequor.compareDNA(newpAequor.complementStrand());
+// newpAequor.compareDNA(newpAequor.complementStrand());
