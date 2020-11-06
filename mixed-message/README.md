@@ -177,7 +177,8 @@ Show examples of usage:
 3. open up terminal and go to the project directory
 4. run the main.js to initilize the node server
 
-   `node main.js // return 'Server is running on http://localhost:8000'`
+   `node main.js`
+   `// return 'Server is running on http://localhost:8000'`
 
 5. you can open up index.html on your favorite browser.
 
