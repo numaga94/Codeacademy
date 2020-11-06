@@ -1,94 +1,76 @@
-/**
- * an inspirational quote generator program. Every time a user runs a program, they should get a new, randomized output.
- * To make your program truly random, the message that it outputs should be made up of at least three different pieces of data.
- */
-const fs = require('fs');
+const app = document.getElementById('root');
 
-const quoteShuffler = {
-  quote: null,
-  author: null,
-  genre: null,
-  fullQuote: null,
+const h1 = document.createElement('h1');
+h1.textContent = 'Quote of the day';
 
-  quoteGenerator() {
-    const content = fs.readFileSync('./quotes.txt', 'utf-8');
-    const cells = content.split(/\r?\n|\r/).map((el) => {
-      // console.log(el.split(';'));
-      return el.split(';');
+const logo = document.createElement('img');
+logo.src = './img/logo.png';
+
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
+
+app.appendChild(h1);
+app.appendChild(logo);
+app.appendChild(container);
+
+// example with fetch API
+fetch('http://localhost:8000/')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    // Work with JSON data here
+    // console.log(data);
+    data.forEach((quotes) => {
+      const card = document.createElement('div');
+      card.setAttribute('class', 'card');
+
+      const h1 = document.createElement('h1');
+      h1.textContent = quotes.GENRE.toUpperCase();
+
+      const p = document.createElement('p');
+      //   quotes.QUOTE = quotes.QUOTE.substring(0, 300);
+      p.textContent = `" ${quotes.QUOTE} " by ${quotes.AUTHOR}`;
+
+      container.appendChild(card);
+      card.appendChild(h1);
+      card.appendChild(p);
     });
+  })
+  .catch((err) => {
+    const errorMessage = document.createElement('marquee');
+    errorMessage.textContent = `Ouupooos, it's not working!`;
+    app.appendChild(errorMessage);
+  });
 
-    const headings = cells.shift();
-    // console.log(headings);
+// example with XHR
 
-    const obj = cells.map((el) => {
-      const obj = {};
-      for (let i = 0, l = el.length; i < l; i++) {
-        obj[headings[i]] = isNaN(Number(el[i])) ? el[i] : +el[i];
-      }
-      return obj;
-    });
+// const request = new XMLHttpRequest();
+// request.open('GET', 'http://localhost:8000/', true);
+// request.onload = function () {
+//   // Begin accessing JSON data here
+//   const data = JSON.parse(this.response);
+//   if (request.status >= 200 && request.status < 400) {
+//     data.forEach((quotes) => {
+//       const card = document.createElement('div');
+//       card.setAttribute('class', 'card');
 
-    return obj;
-  },
+//       const h1 = document.createElement('h1');
+//       h1.textContent = quotes.GENRE.toUpperCase();
 
-  randomQuote(obj) {
-    const randomIndex = Math.floor(Math.random() * obj.length);
-    const randomObj = obj[randomIndex];
-    this.quote = randomObj.QUOTE;
-    this.author = randomObj.AUTHOR;
-    this.genre = randomObj.GENRE;
-    this.fullQuote = randomObj;
-  },
+//       const p = document.createElement('p');
+//       //   quotes.QUOTE = quotes.QUOTE.substring(0, 300);
+//       p.textContent = `"${quotes.QUOTE}>" by ${quotes.AUTHOR}`;
 
-  quoteByGenreAndAuthor(quoteGenre = null, quoteAuthor = null) {
-    const obj = this.quoteGenerator();
-    // console.log(obj);
-    // obj.forEach((element) => console.log(element.GENRE));
+//       container.appendChild(card);
+//       card.appendChild(h1);
+//       card.appendChild(p);
+//     });
+//   } else {
+//     const errorMessage = document.createElement('marquee');
+//     errorMessage.textContent = `Gah, it's not working!`;
+//     app.appendChild(errorMessage);
+//   }
+// };
 
-    if (quoteGenre && quoteAuthor) {
-      const quotes = obj.filter((element) => {
-        return (
-          element.GENRE.trim().toLowerCase() === quoteGenre.trim().toLowerCase() &&
-          element.AUTHOR.trim().toLowerCase() === quoteAuthor.trim().toLowerCase()
-        );
-      });
-      if (quotes.length) {
-        return quotes;
-      }
-    }
-    // console.log(quotes);
-    if (quoteGenre) {
-      const quoteByGenre = obj.filter((element) => {
-        return element.GENRE.trim().toLowerCase() === quoteGenre.trim().toLowerCase();
-      });
-      if (quoteByGenre.length) {
-        return quoteByGenre;
-      }
-      return 'not found';
-    }
-    if (quoteAuthor) {
-      const quoteByAuthor = obj.filter((element) => {
-        return element.AUTHOR.trim().toLowerCase() === quoteAuthor.trim().toLowerCase();
-      });
-      if (quoteByAuthor.length) {
-        return quoteByAuthor;
-      }
-      return 'not found';
-    }
-  },
-
-  morningQuote(quotoGenre = null, quoteAuthor = null) {
-    const quotes = this.quoteByGenreAndAuthor(quotoGenre, quoteAuthor);
-    if (quotes === 'not found') {
-      console.log(`Ouupoos, can't find any ${quotoGenre} quotes by ${quoteAuthor}.\nWould you like to try another?`);
-    } else {
-      this.randomQuote(quotes);
-      console.log(`"${this.quote}" by ${this.author}`);
-    }
-  }
-};
-
-const myQuote = quoteShuffler;
-myQuote.morningQuote(null, 'Kate Beckinsale');
-// myQuote.quoteByGenre();
-// console.log(myQuote);
+// request.send();

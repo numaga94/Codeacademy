@@ -148,6 +148,8 @@ vision.
 ### Prerequisites
 
 - JavaScript
+- CSS
+- HTML
 - Git and GitHub
 - Command line
 
@@ -164,28 +166,38 @@ or look at this [cheat sheet](https://education.github.com/git-cheat-sheet-educa
 
 ## Code Examples
 
-Show examples of usage: `put-your-code-here`
+Show examples of usage:
+
+1. Pull the source code of this project by git
+
+   `git clone https://github.com/NumagaConsulting/Codeacademy/tree/feature/mixed-message`
+
+2. You have to [install node and local environment](https://www.codecademy.com/articles/setting-up-node-locally) to make the following step work as
+   it's exptected.
+3. open up terminal and go to the project directory
+4. run the main.js to initilize the node server
+
+   `node main.js // return 'Server is running on http://localhost:8000'`
+
+5. you can open up index.html on your favorite browser.
 
 ## Features
 
 List of features ready and TODOs for future development
 
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- freshing up the index.html, you will be able to see some inspirational quotes with a beautiful layout.
 
 To-do list:
 
-- Wow improvement to be done 1
-- Wow improvement to be done 2
+- to be able to select the quote by genre or author
 
 ## Status
 
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is in progress. When I learn more about front-end developement, I will come back to finished the feature that I can't accomplish currently.
 
 ## Inspiration
 
-Add here credits. Project inspired by..., based on...
+Add here credits. Project inspired by [Tania Rascia](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/).
 
 ## Contact
 
