@@ -168,7 +168,7 @@ or look at this [cheat sheet](https://education.github.com/git-cheat-sheet-educa
 
 Show examples of usage:
 
-1. Pull the source code of this project by git
+1. open your terminal and pull the source code of this project by git
 
    `git clone https://github.com/NumagaConsulting/Codeacademy/tree/feature/mixed-message`
 
@@ -179,9 +179,9 @@ Show examples of usage:
 
    `node main.js`
    
-   `// return 'Server is running on http://localhost:8000'`
+5. your terminal should return 'Server is running on http://localhost:8000'`
 
-5. you can open up index.html on your favorite browser.
+6. you are good to go to index.html to check out the qutoes of the day.
 
 ## Features
 
