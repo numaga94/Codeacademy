@@ -178,6 +178,7 @@ Show examples of usage:
 4. run the main.js to initilize the node server
 
    `node main.js`
+   
    `// return 'Server is running on http://localhost:8000'`
 
 5. you can open up index.html on your favorite browser.
