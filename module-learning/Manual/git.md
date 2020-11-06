@@ -168,7 +168,8 @@ gain a deeper understanding of Git beyond its basic workflow.
 
 ### Git Cheat Sheet
 
-[GitHub](https://education.github.com/git-cheat-sheet-education.pdf)
+- [GitHub](https://education.github.com/git-cheat-sheet-education.pdf)
+- [常用的 Git 命令清单](https://mp.weixin.qq.com/s/IvGt2l9yHMKcHwbHASOfow)
 
 In this resource, you will learn important and commonly used Git commands. This is helpful if you would like a resource that you can keep referring to
 as you get more used to Git commands.
