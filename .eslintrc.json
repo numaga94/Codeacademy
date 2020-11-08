@@ -19,7 +19,7 @@
     "no-plusplus": "off",
     "curly": ["error", "all"],
     "no-unexpected-multiline": "error",
-    "max-len": ["error", { "code": 150, "ignoreUrls": true }],
+    "max-len": ["error", { "code": 120, "ignoreUrls": true }],
     "indent": ["error", 2],
     "semi": ["error", "always"],
     "comma-dangle": ["error", "never"],
