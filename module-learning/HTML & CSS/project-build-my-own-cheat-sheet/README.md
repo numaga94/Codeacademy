@@ -42,7 +42,7 @@ If you need help setting up your computer, read our
    In our example site, we used tables with columns for:
 
    - The tag or attribute name
-   - The actual formatted tag (eg. <table>)
+   - The actual formatted tag (eg. `<table>`)
    - A description of what to use the tag for.
 
    You can use these same columns or choose your own.
@@ -50,7 +50,7 @@ If you need help setting up your computer, read our
 3. Your site should utilize a custom color scheme. You can use any of the
    [named CSS colors](http://www.colors.commutercreative.com/grid/).
 
-4. Your site should use custom styles for any code such as HTML tags (like <h1>) or CSS properties or values (like
+4. Your site should use custom styles for any code such as HTML tags (like` <h1>`) or CSS properties or values (like
    font-family). Represent code using a
    [monospace](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family#Examples) font family and a different
    background color.
