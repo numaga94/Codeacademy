@@ -14,7 +14,7 @@ app.appendChild(logo);
 app.appendChild(container);
 
 // example with fetch API
-fetch('http://localhost:8000/')
+fetch('https://quotes.servehttp.com/')
   .then((response) => {
     return response.json();
   })
