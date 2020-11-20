@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Full-stack JS with Codeacademy",
   "main": ".js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
