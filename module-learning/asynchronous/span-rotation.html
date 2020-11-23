@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>requestAnimationFrame spinner example</title>
+    <style>
+      html {
+        background-color: white;
+        height: 100%;
+      }
+
+      body {
+        height: inherit;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div {
+        display: inline-block;
+        font-size: 15rem;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>♡</div>
+    <script>
+      // Store reference to the div element, create a rotate counter and null startTime
+      // and create an uninitialized variable to store the requestAnimationFrame() call in
+      const spinner = document.querySelector('div');
+      let rotateCount = 0;
+      let startTime = null;
+      let rAF;
+
+      // Create a draw() function
+      function draw(timestamp) {
+        if (!startTime) {
+          startTime = timestamp;
+        }
+
+        rotateCount = (timestamp - startTime) / 10;
+
+        // If rotateCount gets over 359, set it to 'remainder of dividing by 360'
+        if (rotateCount > 359) {
+          rotateCount %= 360;
+        }
+
+        // Set the rotation of the div to be equal to rotateCount degrees
+        spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
+
+        // Call the next frame in the animation
+        rAF = requestAnimationFrame(draw);
+      }
+
+      draw();
+    </script>
+  </body>
+</html>
+
+" SELECT p.ID AS 'OrderID', p.post_date AS 'PurchaseDate', MAX( CASE WHEN pm.meta_key = '_billing_last_name' AND p.ID =
+pm.post_id THEN pm.meta_value END ) AS 'LastName', MAX( CASE WHEN pm.meta_key = '_billing_first_name' AND p.ID =
+pm.post_id THEN pm.meta_value END ) AS 'FirstName', MAX( CASE WHEN pm.meta_key = '_billing_wooccm10' AND p.ID =
+pm.post_id THEN pm.meta_value END ) AS 'Sex', MAX( CASE WHEN pm.meta_key = '_billing_wooccm11' AND p.ID = pm.post_id
+THEN pm.meta_value END ) AS 'Birthday', MAX( CASE WHEN pm.meta_key = '_billing_address_1' AND p.ID = pm.post_id THEN
+pm.meta_value END ) AS 'Address', MAX( CASE WHEN pm.meta_key = '_billing_city' AND p.ID = pm.post_id THEN pm.meta_value
+END ) AS 'City', MAX( CASE WHEN pm.meta_key = '_billing_postcode' AND p.ID = pm.post_id THEN pm.meta_value END ) AS
+'PostCode', MAX( CASE WHEN pm.meta_key = '_billing_country' AND p.ID = pm.post_id THEN pm.meta_value END ) AS 'Country',
+MAX( CASE WHEN pm.meta_key = '_billing_email' AND p.ID = pm.post_id THEN pm.meta_value END ) AS 'EmailAddress', MAX(
+CASE WHEN pm.meta_key = '_billing_wooccm9' AND p.ID = pm.post_id THEN pm.meta_value END ) AS 'WeChat', MAX( CASE WHEN
+pm.meta_key = '_billing_phone' AND p.ID = pm.post_id THEN pm.meta_value END ) AS 'Phone', MAX( CASE WHEN pm.meta_key =
+'_order_total' AND p.ID = pm.post_id THEN pm.meta_value END ) AS 'OrderTotal', MAX( CASE WHEN pm.meta_key = '_paid_date'
+AND p.ID = pm.post_id THEN pm.meta_value END ) AS 'PaidDate', MAX( CASE WHEN pm.meta_key = '_payment_method_title' AND
+p.ID = pm.post_id THEN pm.meta_value END ) AS 'PaymentMethod', MAX( CASE WHEN m.meta_key = '_qty' AND oi.order_item_id =
+m.order_item_id THEN m.meta_value END ) AS 'QtyOrdered', MAX( CASE WHEN oi.order_id = p.ID THEN oi.order_item_name END )
+AS 'OrderName', p.post_excerpt AS 'UserComments', CASE p.post_status WHEN 'wc-pending' THEN 'Pending Payment' WHEN
+'wc-processing' THEN 'Processing' WHEN 'wc-on-hold' THEN 'On Hold' WHEN 'wc-completed' THEN 'Completed' WHEN
+'wc-cancelled' THEN 'Cancelled' WHEN 'wc-refunded' THEN 'Refunded' WHEN 'wc-failed' THEN 'Failed' ELSE p.post_status END
+AS 'PurchaseStatus' FROM wp_01posts AS p JOIN wp_01postmeta AS pm ON p.ID = pm.post_id JOIN wp_01woocommerce_order_items
+AS oi ON p.ID = oi.order_id JOIN wp_01woocommerce_order_itemmeta m ON oi.order_item_id = m.order_item_id AND m.meta_key
+= '_qty' WHERE post_type = 'shop_order' AND p.post_status <> 'trash' GROUP BY p.ID INTO OUTFILE '/tmp/orders.csv' FIELDS
+TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n'; "
