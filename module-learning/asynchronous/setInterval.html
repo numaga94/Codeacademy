@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple setInterval clock</title>
+    <style>
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        display: inline-flex;
+        justify-content: center;
+      }
+      button {
+        font-size: 1.5em;
+        margin: 20px 15px;
+      }
+
+      .time {
+        width: 4em;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <seciton class="clock">
+      <p class="btn">
+        <button class="start">start</button>
+        <button class="stop">stop</button>
+        <button class="reset">reset</button>
+      </p>
+      <p class="time"></p>
+    </seciton>
+    <script>
+      let counter = 0;
+      const startCounter = () => {
+        const hour = Math.floor(counter / 3600);
+        const minute = Math.floor((counter % 3600) / 60);
+        const second = counter % 60;
+
+        const displayHr = hour < 10 ? '0' + hour.toString() : hour.toString();
+        const displayMn = minute < 10 ? '0' + minute.toString() : minute.toString();
+        const displayS = second < 10 ? '0' + second.toString() : second.toString();
+
+        document.querySelector('.time').textContent = displayHr + ':' + displayMn + ':' + displayS;
+
+        counter++;
+      };
+
+      let stopCounter;
+      // start btn
+      const start = document.querySelector('.start');
+      start.addEventListener('click', () => {
+        stopCounter = setInterval(() => {
+          startCounter();
+        }, 1000);
+      });
+      // stop btn
+      const stop = document.querySelector('.stop');
+      stop.addEventListener('click', () => {
+        clearInterval(stopCounter);
+      });
+
+      // reset btn
+      const reset = document.querySelector('.reset');
+      reset.addEventListener('click', () => {
+        clearInterval(stopCounter);
+        counter = 0;
+        startCounter();
+      });
+    </script>
+  </body>
+</html>
