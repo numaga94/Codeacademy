@@ -18,24 +18,24 @@ Use AJAX to asynchronously request data from APIs. fetch() and async/await are n
 
 ## request with XMLHttpRequest
 
-![xhr request](./xhr-request/public/XHR GET diagram.svg)
+![xhr request](./xhr-request/public/XHR-GET-diagram.svg)
 
 ## post with XMLHttpRequest
 
-![xhr post](./xhr-post/XHR POST diagram.svg)
+![xhr post](./xhr-post/XHR-POST-diagram.svg)
 
 ## request with fetch ES6
 
-![fetch request es6](./fetch-request/fetch GET transparent.svg)
+![fetch request es6](./fetch-request/fetch-GET-transparent.svg)
 
 ## post with fetch ES6
 
-![fetch post es6](./fetch-post/fetch POST transparent.svg)
+![fetch post es6](./fetch-post/fetch-POST-transparent.svg)
 
 ## request with fetch ES8
 
-![fetch request es8](./fetch-request-async-await/async await GET transparent.svg)
+![fetch request es8](./fetch-request-async-await/async-await-GET-transparent.svg)
 
 ## post with fetch ES8
 
-![fetch post es8](./fetch-post-async-await/async await POST transparent.svg)
+![fetch post es8](./fetch-post-async-await/async-await-POST-transparent.svg)
