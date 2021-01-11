@@ -1,6 +1,19 @@
 {
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+
+  "plugins": ["prettier"],
+
   "extends": [
     "airbnb",
+    "airbnb-base",
     "airbnb/hooks",
     "prettier",
     "prettier/@typescript-eslint",
@@ -11,7 +24,7 @@
     "prettier/unicorn",
     "prettier/vue"
   ],
-  "plugins": ["prettier"],
+
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "error",
