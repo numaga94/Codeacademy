@@ -29,6 +29,6 @@ CopyCat.propTypes = {
   userInput: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   copying: PropTypes.bool.isRequired,
-  toggleTape: PropTypes.func.isRequried,
+  toggleTape: PropTypes.func.isRequired,
   name: PropTypes.string
 };
