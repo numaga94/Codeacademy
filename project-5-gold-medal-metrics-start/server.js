@@ -71,7 +71,7 @@ app.get('/country/:countryName', (req, res, next) => {
           console.log(err);
         }
         if (row) {
-          country.gdp = row.gdp;
+          country.gdp = Math.round(row.gdp);
           country.population = row.population;
         } else {
           country.gdp = '-';
