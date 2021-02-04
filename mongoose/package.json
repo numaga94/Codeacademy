@@ -1,0 +1,11 @@
+{
+  "name": "learn-mongoose",
+  "version": "1.0.0",
+  "description": "For L1 of Testing Models",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.11.13"
+  }
+}
