@@ -2,3 +2,4 @@
 #/.pnp.*
 *.csv
 node_modules/
+*.env
