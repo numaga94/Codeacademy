@@ -1,10 +1,10 @@
 {
   "name": "pernquote",
   "version": "1.0.0",
-  "main": "src/app.ts",
+  "main": "src/server.ts",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon dist/app.js",
+    "start:dev": "nodemon dist/server.js",
     "build:dev": "tsc --watch --preserveWatchOutput",
     "dev": "concurrently 'yarn:build:dev' 'yarn:start:dev'"
   },
