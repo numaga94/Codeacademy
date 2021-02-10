@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const quoteRouter = require('./quotes');
 const apiRouter = express.Router();
