@@ -9,13 +9,7 @@ export const cardsSlice = createSlice({
   },
   reducers: {
     addCard(state, action) {
-      return {
-        ...state,
-        cards: {
-          ...state.cards,
-          [action.payload.id]: action.payload
-        }
-      };
+      state.cards[action.payload.id] = action.payload;
     }
   }
 });

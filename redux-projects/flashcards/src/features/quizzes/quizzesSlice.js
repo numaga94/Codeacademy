@@ -14,13 +14,14 @@ export const quizzesSlice = createSlice({
   },
   reducers: {
     addQuiz: (state, action) => {
-      return {
-        ...state,
-        quizzes: {
-          ...state.quizzes,
-          [action.payload.id]: action.payload
-        }
-      };
+      // return {
+      //   ...state,
+      //   quizzes: {
+      //     ...state.quizzes,
+      //     [action.payload.id]: action.payload
+      //   }
+      // };
+      state.quizzes[action.payload.id] = action.payload;
     }
   }
 });

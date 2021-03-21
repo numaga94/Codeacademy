@@ -5,7 +5,7 @@ import ROUTES from '../app/routes';
 import { useSelector, useDispatch } from 'react-redux';
 import { addQuiz } from '../features/quizzes/quizzesSlice';
 import { addQuizId, selectTopics } from '../features/topics/topicsSlice';
-import { addCard, selectCards } from '../features/cards/cardsSlice';
+import { addCard } from '../features/cards/cardsSlice';
 
 export default function NewQuizForm() {
   const [name, setName] = useState('');

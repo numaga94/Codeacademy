@@ -14,13 +14,14 @@ export const topicsSlice = createSlice({
   },
   reducers: {
     addTopic: (state, action) => {
-      return {
-        ...state,
-        topics: {
-          ...state.topics,
-          [action.payload.id]: action.payload
-        }
-      };
+      // return {
+      //   ...state,
+      //   topics: {
+      //     ...state.topics,
+      //     [action.payload.id]: action.payload
+      //   }
+      // };
+      state.topics[action.payload.id] = action.payload;
     },
     addQuizId: (state, action) => {
       const keys = Object.keys(state.topics);

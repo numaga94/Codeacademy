@@ -10,7 +10,12 @@ export default function Topic() {
   const quizzes = useSelector(selectQuizzes); // replace this with a call to your selector to select all the quizzes in state
   let { topicId } = useParams();
   const topic = topics[topicId];
-  const quizzesForTopic = topic.quizIds.map((quizId) => quizzes[quizId]);
+
+  const quizzesForTopic = topic ? topic.quizIds.map((quizId) => quizzes[quizId]) : null;
+
+  if (!quizzesForTopic) {
+    return null;
+  }
 
   return (
     <section>
