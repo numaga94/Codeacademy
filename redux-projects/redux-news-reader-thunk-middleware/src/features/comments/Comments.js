@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadCommentsForArticleId, selectComments, isLoadingComments } from '../comments/commentsSlice';
+import { loadCommentsForArticleId, selectComments, isLoadingComments } from './commentsSlice';
 import { selectCurrentArticle } from '../currentArticle/currentArticleSlice';
 import CommentList from '../../components/CommentList';
 import CommentForm from '../../components/CommentForm';

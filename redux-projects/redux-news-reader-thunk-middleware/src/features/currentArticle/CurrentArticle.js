@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectCurrentArticle, isLoadingCurrentArticle } from '../currentArticle/currentArticleSlice';
+import { selectCurrentArticle, isLoadingCurrentArticle } from './currentArticleSlice';
 import FullArticle from '../../components/FullArticle';
 
 const CurrentArticle = () => {

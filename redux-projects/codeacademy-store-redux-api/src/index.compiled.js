@@ -232,7 +232,7 @@
 
         var _data = require('../../../data.js');
 
-        var _currencyFilterSlice = require('./currencyFilterSlice.js.js.js');
+        var _currencyFilterSlice = require('./currencyFilterSlice.js.js.js.js');
 
         function _interopRequireDefault(obj) {
           return obj && obj.__esModule ? obj : { default: obj };
@@ -342,7 +342,7 @@
 
         var _utilities = require('../../utilities/utilities.js.js');
 
-        var _cartSlice = require('../cart/cartSlice.js.js.js');
+        var _cartSlice = require('../cart/cartSlice.js.js.js.js');
 
         var _inventorySlice = require('./inventorySlice');
 
@@ -508,7 +508,7 @@
 
         var _reactDom = _interopRequireDefault(require('react-dom'));
 
-        var _App = require('./app/App.js.js.js');
+        var _App = require('./app/App.js.js.js.js');
 
         function _interopRequireDefault(obj) {
           return obj && obj.__esModule ? obj : { default: obj };
